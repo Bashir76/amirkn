@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Ameer kn</title>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="<script src="https://kit.fontawesome.com/053dffb19d.js" crossorigin="anonymous"></script>
+<link rel="icon" type="image/x-icon" href="https://github.com/Bashir76/amirkn/blob/0a56d564a3a8120f614f120e2b11ac40e74debb6/img.jpg/favicon.ico">
+<style>
+
+html,body,h1,h2,h3,h4,h5,h6,p {font-family: "Roboto", sans-serif}
+</style>
+
+<div class="w3-third  w3-left  w3-margin-">
+<p><b><i>Leave me comment!</i></b></p>
+<?php
+// define variables and set to empty values
+$name ="welcome.php" $email = $comment = $Phone number = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $name = test_input($_POST["full name"]);
+  $email = test_input($_POST["email"]);
+  $Phone Number = test_input($_POST["Phone number"]);
+  $comment = test_input($_POST["comment"]);
+}
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+?>
+
+<form method="post" action="<?welcome.php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>
+
+Full Name: <input type="text" name="name">
+<span class="error"> <?php echo $nameErr;?></span>
+<br><br>
+E-mail:
+<input type="text" name="email">
+<span class="error"> <?php echo $emailErr;?></span>
+<br><br>
+Phone Number:
+<input type="numbers" name="Phone number">
+<span class="error"><?php echo $websiteErr;?></span>
+<br><br>
+Comment: <textarea name="comment" rows="4" cols="24" ; ></textarea>
+<br><br>
+
+<input type="submit" name="submit" value="Submit" cols="15" class="w3-button w3-round-xxlarge w3-small w3-black w3-margin-bottom w3-center">
+<br><br>
+</form>
+</div>
+
+<!-- footer started  -->
+
+<footer class="w3-container w3-teal w3-center w3-margin-top">
+
+<p>Find me on social media.</p>
+
+<i class="fa fa-facebook-official w3-hover-opacity"></i>
+<i class="fa fa-instagram w3-hover-opacity"></i>
+
+<i class="fa fa-snapchat w3-hover-opacity"></i>
+
+<i class="fa fa-pinterest-p w3-hover-opacity"></i>
+
+<i class="fa fa-twitter w3-hover-opacity"></i>
+
+<i class="fa fa-linkedin w3-hover-opacity"></i><br>
+
+  <a href="#home" class="active">Home</a>
+  <a href="#feedback">Feedback</a>
+  <a href="#contact">Contact</a>
+  <a href="#about">About</a><br>
+
+   <p>&#169Amirkn2022 and w3school</p>
+ <!-- End footer -->
+
+</footer>
+
+
+</body>
+
+</html>
+
+
